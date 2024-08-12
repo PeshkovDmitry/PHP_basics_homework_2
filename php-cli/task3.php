@@ -9,4 +9,4 @@
 // Павловск, Кронштадт Рязанская область … (названия городов можно найти на maps.yandex.ru).
 
 
-// docker run --rm -v c:/Users/Дима/PHP/php-cli/:/cli php:8.2-cli php /cli/task3.php
+// docker run --rm -v ${pwd}/php-cli/:/cli php:8.2-cli php /cli/task3.php

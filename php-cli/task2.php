@@ -7,4 +7,4 @@
 // В зависимости от переданного значения операции выполнить одну из арифметических операций 
 // (использовать функции из пункта 3) и вернуть полученное значение (использовать switch).
 
-// docker run --rm -v c:/Users/Дима/PHP/php-cli/:/cli php:8.2-cli php /cli/task2.php
+// docker run --rm -v ${pwd}/PHP/php-cli/:/cli php:8.2-cli php /cli/task2.php

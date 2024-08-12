@@ -8,4 +8,4 @@
 // 21 час 43 минуты.
 
 
-// docker run --rm -v c:/Users/Дима/PHP/php-cli/:/cli php:8.2-cli php /cli/task6.php
+// docker run --rm -v ${pwd}/php-cli/:/cli php:8.2-cli php /cli/task6.php
