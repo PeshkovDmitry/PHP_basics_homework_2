@@ -19,18 +19,23 @@ function translate($text, $charsArr) {
     $result = "";
     for ($i = 0; $i < strlen($text); $i++)  {
         $char = $text[$i];
-        echo $char;
-        if (array_key_exists("а", $charsArr)) {
-            echo "true";
-            $result = $result . $charsArr[$char]; 
-        } else {
-            $result = $result . $char;
-        }
+        // var_dump($text[$i]);
+        // var_dump($text[$i] . " ");
+        // echo $text[$i];
+        echo $char . PHP_EOL;
+        // echo $text[$i] . " ";
+        // if (array_key_exists($char, $charsArr)) {
+        //     $result = $result . $charsArr[$char]; 
+        // } else {
+        //     $result = $result . $char;
+        // }
+        // $result = $result . $charsArr[$char];
     }
-    return $result;
+    return $result . "\n\r";
 }
 
-$text = "привет, мир!";
+// $text = "Hello, world!";
+$text = "Привет, мир!";
 echo translate($text, $charsArr);
 
 
