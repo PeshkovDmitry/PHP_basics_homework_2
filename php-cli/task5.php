@@ -12,7 +12,7 @@ function power($val, $pow) {
     return $val * power($val, $pow - 1); 
 }
 
-echo power(2, 8);
+echo power(2, 8) . PHP_EOL;
 
 
 
