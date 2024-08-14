@@ -17,26 +17,19 @@ $charsArr = [
 
 function translate($text, $charsArr) {
     $result = "";
-    for ($i = 0; $i < strlen($text); $i++)  {
-        $char = $text[$i];
-        // var_dump($text[$i]);
-        // var_dump($text[$i] . " ");
-        // echo $text[$i];
-        echo $char . PHP_EOL;
-        // echo $text[$i] . " ";
-        // if (array_key_exists($char, $charsArr)) {
-        //     $result = $result . $charsArr[$char]; 
-        // } else {
-        //     $result = $result . $char;
-        // }
-        // $result = $result . $charsArr[$char];
+    for ($i = 0; $i < mb_strlen($text); $i++)  {
+        $char = mb_substr($text, $i, 1, "UTF-8");
+        $isUpper = ($char == mb_strtoupper($char));
+        $char = mb_strtolower($char);
+        $char = array_key_exists($char, $charsArr) ? $charsArr[$char] : $char;  
+        $char = $isUpper ? mb_strtoupper($char) : $char; 
+        $result = $result . $char;
     }
-    return $result . "\n\r";
+    return $result;
 }
 
-// $text = "Hello, world!";
 $text = "Привет, мир!";
-echo translate($text, $charsArr);
+echo translate($text, $charsArr) . "\n\r";
 
 
 // docker run --rm -v ${pwd}/php-cli/:/cli php:8.2-cli php /cli/task4.php
